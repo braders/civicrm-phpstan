@@ -1,0 +1,25 @@
+parameters:
+  level: 8
+  treatPhpDocTypesAsCertain: false
+  paths:
+    - ../CRM
+    - ../Civi
+    - ../api
+  scanDirectories:
+    - ../packages
+    - ../ext
+  bootstrapFiles:
+     - stubs/wordpress.stub.php
+     - stubs/drupal.stub.php
+     - bootstrap.php
+  universalObjectCratesClasses:
+     - CRM_Core_Config
+     - CRM_Core_DAO
+     - Civi\Core\Event\GenericHookEvent
+  excludePaths:
+     - ../packages/HTML/QuickForm/advmultiselect.php
+     - ../Civi/Test
+     - ../tests/phpunit
+     - */DAO/*
+  parallel:
+    processTimeout: 120.0
