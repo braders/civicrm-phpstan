@@ -9,8 +9,10 @@ parameters:
     - ../packages
     - ../ext
   bootstrapFiles:
+     - stubs/joomla.stub.php
      - stubs/wordpress.stub.php
      - stubs/drupal.stub.php
+     - stubs/drupal-namespaces.stub.php
      - bootstrap.php
   universalObjectCratesClasses:
      - CRM_Core_Config

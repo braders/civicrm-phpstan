@@ -1,6 +1,8 @@
 <?php
 define('CIVICRM_SITE_KEY', 1);
 define('CIVICRM_UF', 1);
+define('CIVICRM_UF_BASEURL', '');
+define('CIVICRM_DOMAIN_ID', '');
 define('OF_OPEN', 1);
 define('FRIBIDI_AUTO', 1);
 define('CIVICRM_DSN', 1);
@@ -23,6 +25,7 @@ define('JS_LIBRARY', 1);
 define('LANGUAGE_NEGOTIATION_URL_DOMAIN', 1);
 define('LANGUAGE_NEGOTIATION_URL_PREFIX', 1);
 define('CIVICRM_PLUGIN_URL', '');
+define('WATCHDOG_DEBUG', '');
 
 set_include_path(get_include_path() . PATH_SEPARATOR . __DIR__ . '/../');
 set_include_path(get_include_path() . PATH_SEPARATOR . __DIR__ . '/../packages');
@@ -36,6 +39,8 @@ require_once 'HTML/QuickForm/Page.php';
 
 require_once 'CRM/Core/ClassLoader.php';
 CRM_Core_ClassLoader::singleton()->register();
+
+require_once 'CRM/Core/DAO/permissions.php';
 
 class_alias('CRM_Core_Exception', 'API_Exception');
 class_alias('CRM_Core_Exception', 'CiviCRM_API3_Exception');
