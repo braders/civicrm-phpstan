@@ -21,12 +21,12 @@ First ensure you have a CiviCRM installation, with composer dependencies install
 
 Clone this civicrm-phpstan repository into the CiviCRM folder. Do not place the folder in the CMS root folder. So for example, the path to your  civicrm-phpstan folder might be:
 
-/app/civicrm-core/civicrm-phpstan
-app/vendor/civicrm/civicrm-core
-/app/wordpress/wp-content/plugins/civicrm/civicrm/civicrm-phpstan
-/app/drupal/sites/all/modules/civicrm/
-/app/backdrop/modules/civicrm/
-/app/joomla/administrator/components/com_civicrm/civicrm/
+ - `/app/civicrm-core/civicrm-phpstan`
+ - `/app/vendor/civicrm/civicrm-core`
+ - `/app/wordpress/wp-content/plugins/civicrm/civicrm/civicrm-phpstan`
+ - `/app/drupal/sites/all/modules/civicrm/`
+ - `/app/backdrop/modules/civicrm/`
+ - `/app/joomla/administrator/components/com_civicrm/civicrm/`
 
 Finally within the civicrm-phpstan folder run `composer install` to download PHPStan.
 
