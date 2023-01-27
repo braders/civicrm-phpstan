@@ -5,6 +5,7 @@ parameters:
     - ../CRM
     - ../Civi
     - ../api
+    - ../tests
   scanDirectories:
     - ../packages
     - ../ext
@@ -19,9 +20,9 @@ parameters:
      - CRM_Core_DAO
      - Civi\Core\Event\GenericHookEvent
   excludePaths:
+     - ../Civi/Test/Legacy/CiviTestListener.php
+     - ../Civi/Test/TAPLegacy.php
      - ../packages/HTML/QuickForm/advmultiselect.php
-     - ../Civi/Test
-     - ../tests/phpunit
      - */DAO/*
   parallel:
     processTimeout: 120.0

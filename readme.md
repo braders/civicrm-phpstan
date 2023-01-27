@@ -28,7 +28,7 @@ Clone this civicrm-phpstan repository into the CiviCRM folder. Do not place the 
  - `/app/backdrop/modules/civicrm/`
  - `/app/joomla/administrator/components/com_civicrm/civicrm/`
 
-Finally within the civicrm-phpstan folder run `composer install` to download PHPStan.
+Finally within the civicrm-phpstan folder run `composer install` to download PHPStan. `phpuunit` will also be installed, to allow PHPStan to analyze CiviCRM tests.
 
 Usage
 -----
@@ -41,7 +41,7 @@ vendor/bin/phpstan analyse --memory-limit 8G > output.log
 
 This will analyse the codebase, and write the results to output.log. The memory limit can be changed dependant on how much memory is available, but the analysis is likely to fail with less than 8GB of memory.
 
-On low-memory systems sometimes the tests run more reliably when passing `--debug` to PHPStan, but this does make the analysis slower.
+On low-memory systems sometimes PHPStan runs more reliably when passing `--debug` to PHPStan, but this does make the analysis slower.
 
 The full set of PHPStan command line options can be found at https://phpstan.org/user-guide/command-line-usage
 
@@ -56,7 +56,7 @@ Specific configuration options you may want to play with include:
 
  - `level`: PHPStan has the concept of rule levels, which determine how strictly to check the code. The available options are 1-10 (0 is the loosest and 9 is the strictest). Starting with a low level is recommended to reduce the amount of un-actionable noise.
  - `ignoreErrors`: Currently CiviCRM can generate hundreds of errors in the analysis. You may wish to ignore the errors which you are not interested in.
- - `paths`, `excludePaths`: Currently only the `CRM`, `Civi` and `api` paths are scanned by default. You may wish to include other folders such as `tests` or `packages`. (Note that including `tests` may require extra configuration changes to make PHPUnit available to PHPStan)
+ - `paths`, `excludePaths`: Currently only the `CRM`, `Civi`, `api` and `tests` paths are scanned by default.
 
 Bootstrap Files
 -----

@@ -26,10 +26,12 @@ define('LANGUAGE_NEGOTIATION_URL_DOMAIN', 1);
 define('LANGUAGE_NEGOTIATION_URL_PREFIX', 1);
 define('CIVICRM_PLUGIN_URL', '');
 define('WATCHDOG_DEBUG', '');
+define('CIVICRM_MAIL_LOG', false);
 
 set_include_path(get_include_path() . PATH_SEPARATOR . __DIR__ . '/../');
 set_include_path(get_include_path() . PATH_SEPARATOR . __DIR__ . '/../packages');
 
+require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/../vendor/autoload.php';
 
 require_once 'HTML/QuickForm/Renderer/ArraySmarty.php';
