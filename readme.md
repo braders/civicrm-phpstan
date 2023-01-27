@@ -62,3 +62,5 @@ Bootstrap Files
 -----
 
 As CiviCRM is intended for use in different CMS's, it necessarily references functions and classes which are only available in specific CMS installations. For example, `module_exists` only exists on Drupal, and `WP_Post` only exists on WordPress. To stop PHPStan warning about these CMS-specific functions and classes, stub files are configured in `phpstan.neon`. These stub files contain the interface of the CMS-specific functions and classes used by CiviCRM, including PHPDoc annotations, but don't contain any actual logic.
+
+If you wish to add new stubs, it is recommended to add new files rather than editing the ones provided in this repo. This will allow you to easily download and apply the latest stub files in future, even if you have changed the phpstan.neon configuration.
